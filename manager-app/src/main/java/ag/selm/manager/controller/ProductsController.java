@@ -4,7 +4,6 @@ import ag.selm.manager.client.BadRequestException;
 import ag.selm.manager.client.ProductsRestClient;
 import ag.selm.manager.controller.payload.NewProductPayload;
 import ag.selm.manager.entity.Product;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,7 +33,7 @@ public class ProductsController {
     }
 
     @PostMapping("create")
-    public String createProduct(@Valid NewProductPayload payload,
+    public String createProduct(NewProductPayload payload,
                                 BindingResult bindingResult,
                                 Model model) {
         try {
