@@ -1,0 +1,13 @@
+selmag:
+  services:
+    catalogue:
+      uri: http://localhost:8081
+      username: catalogue_service_user
+      password: password
+spring:
+  datasource:
+    url: jdbc:postgresql://172.29.253.96:5433/manager
+    username: manager
+    password: manager
+  jpa:
+    show-sql: true
